@@ -17,6 +17,13 @@ export type InfoButtonProps = {
   children: string;
 };
 
+type CornerProps = {
+  [index: string]: string;
+  bottomLeft: string;
+  upperLeft: string;
+  upperRight: string;
+  bottomRight: string;
+};
 export const Button = styled("button")<ButtonProps>`
   display: flex;
   justify-content: center;
@@ -75,7 +82,7 @@ export const InfoButton: React.FC<InfoButtonProps> = ({
   bgColor,
   children,
 }) => {
-  const corners: any = {
+  const corners: CornerProps = {
     bottomLeft: "0px 25px 0px 0px",
     upperLeft: "0px 0px 25px 0px",
     upperRight: "0px 0px 0px 25px",
