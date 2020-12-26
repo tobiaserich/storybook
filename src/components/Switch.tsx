@@ -7,13 +7,17 @@ export type SwitchPanelProps = {
 
 export type SwitchKnobProps = {
   knobColor: string;
+
   animation: boolean | null;
+
 };
 
 export type SwitchProps = {
   shadowColor: SwitchPanelProps["shadowColor"];
   knobColor: SwitchKnobProps["knobColor"];
+
   animationTrigger: boolean | null;
+
 };
 
 export const SwitchPanel = styled("div")<SwitchPanelProps>`
@@ -69,6 +73,7 @@ export const SwitchButton: React.FC<SwitchProps> = ({
   knobColor,
   animationTrigger,
 }) => {
+
   const [animation, setAnimation] = React.useState<null | boolean>(null);
 
   React.useEffect(() => {
