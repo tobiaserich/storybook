@@ -16,6 +16,7 @@ export type SwitchProps = {
   knobColor: SwitchKnobProps["knobColor"];
   animationTrigger?: boolean | null;
   onStatusChange?: (status: boolean) => void;
+
 };
 
 export const SwitchPanel = styled("div")<SwitchPanelProps>`
