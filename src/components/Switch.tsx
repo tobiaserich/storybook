@@ -14,8 +14,8 @@ export type SwitchKnobProps = {
 export type SwitchProps = {
   shadowColor: SwitchPanelProps["shadowColor"];
   knobColor: SwitchKnobProps["knobColor"];
-  animationTrigger: boolean | null;
-  onStatusChange: (status: boolean) => void;
+  animationTrigger?: boolean | null;
+  onStatusChange?: (status: boolean) => void;
 };
 
 export const SwitchPanel = styled("div")<SwitchPanelProps>`
@@ -75,11 +75,11 @@ export const SwitchButton: React.FC<SwitchProps> = ({
   const [animation, setAnimation] = React.useState<null | boolean>(null);
 
   React.useEffect(() => {
-    setAnimation(animationTrigger);
+    animationTrigger ? setAnimation(animationTrigger) : "";
   }, [animationTrigger]);
 
   const handleClick = () => {
-    onStatusChange(!animation);
+    onStatusChange ? onStatusChange(!animation) : "";
     setAnimation(!animation);
   };
 
