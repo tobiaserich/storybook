@@ -33,7 +33,6 @@ export const Switch = SwitchButtonTemplate.bind({});
 Switch.argTypes = {
   knobColor: { control: "color" },
   shadowColor: { control: "color" },
-  animationTrigger: { control: "boolean" },
 };
 
 Switch.args = {
@@ -45,7 +44,6 @@ export const SwitchPanel = SwitchPanelTemplate.bind({});
 SwitchPanel.argTypes = {
   shadowColor: { control: "color" },
   knobColor: { table: { disable: true } },
-  animationTrigger: { table: { disable: true } },
 };
 SwitchPanel.args = {
   shadowColor: "#535050",
@@ -56,7 +54,6 @@ SwitchKnob.argTypes = {
   knobColor: { control: "color" },
   animation: { control: "boolean" },
   shadowColor: { table: { disable: true } },
-  animationTrigger: { table: { disable: true } },
 };
 
 SwitchKnob.args = {
