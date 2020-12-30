@@ -78,8 +78,7 @@ export const InputBox: React.FC<InputBoxProps> = ({ points }) => {
 };
 
 export const InputBoxWithKnob: React.FC = () => {
-  const [points, setPoints] = React.useState(0);
-
+  const [points, setPoints] = React.useState(1);
   const handleEvent = (status: boolean): void => {
     console.log("yey");
     if (status) {
