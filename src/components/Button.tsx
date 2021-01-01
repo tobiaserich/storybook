@@ -25,7 +25,7 @@ type CornerProps = {
   upperRight: string;
   bottomRight: string;
 };
-export const Button = styled("button")<ButtonProps>`
+export const ButtonRoundCorners = styled("button")<ButtonProps>`
   display: flex;
   justify-content: center;
   font-size: 1.7rem;
@@ -96,3 +96,15 @@ export const InfoButton: React.FC<InfoButtonProps> = ({
     </Info>
   );
 };
+
+export const ButtonOvalCorners = styled("button")`
+  background-color: #4f7b82;
+  font-size: 20px;
+  color: white;
+  border: none;
+  padding: 5px 20px 5px 20px;
+  border-radius: 4px;
+  :active {
+    background-color: #3c5d62;
+  }
+`;
