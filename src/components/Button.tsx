@@ -9,6 +9,7 @@ export type ButtonProps = {
 
 export type ExitButtonProps = {
   bgColor: string;
+  modal?;
 };
 
 export type InfoButtonProps = {
@@ -66,6 +67,7 @@ export const Info = styled("button")<InfoButtonProps>`
 `;
 
 export const ExitButton = styled("button")<ExitButtonProps>`
+  ${({ modal }) => (modal ? "position:absolute;" : "")}
   height: 30px;
   width: 30px;
   top: -10px;
@@ -73,7 +75,7 @@ export const ExitButton = styled("button")<ExitButtonProps>`
   border-radius: 50%;
   border: none;
   font-weight: 600;
-  background-color: ${({ bgColor }) => bgColor};
+  background-color: ${({ bgColor }) => (bgColor ? bgColor : "#f7e5b5")};
   color: inherit;
 `;
 

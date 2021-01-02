@@ -71,12 +71,10 @@ export const SwitchButton: React.FC<SwitchProps> = ({
   onStatusChange,
 }) => {
   const [animation, setAnimation] = React.useState<boolean>(true);
-
   const handleClick = () => {
     onStatusChange !== undefined ? onStatusChange(!animation) : "";
     setAnimation(!animation);
   };
-
   return (
     <SwitchPanel shadowColor={shadowColor}>
       <SwitchKnob
