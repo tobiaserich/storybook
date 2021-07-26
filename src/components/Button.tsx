@@ -9,7 +9,6 @@ export type ButtonProps = {
 
 export type ExitButtonProps = {
   bgColor: string;
-  modal?;
 };
 
 export type InfoButtonProps = {
